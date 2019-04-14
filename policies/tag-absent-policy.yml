@@ -1,0 +1,9 @@
+policies:
+  - name: tag-absent-policy
+    resource: ec2
+    filters:
+      - "tag:TestTag": present
+    actions:
+      - type: tag
+        key: TestTag
+        value: "TRUE"

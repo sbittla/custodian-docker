@@ -9,5 +9,6 @@ RUN pip3 install --upgrade awscli
 RUN export PATH=/root/.local/bin/aws:$PATH
 RUN mkdir /custodian-policies
 ADD $PWD/policies/* /custodian-policies/
+ADD $PWD/custodian-run.sh /custodian-policies/
 
 VOLUME /reports
